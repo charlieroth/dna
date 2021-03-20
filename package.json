@@ -4,7 +4,8 @@
   "description": "Data structures aNd Algorithms in TypeScript",
   "main": "src/index.ts",
   "scripts": {
-    "test:ll:singly": "tap test/linked-lists/singly.test.ts"
+    "test:ll:singly": "tap test/linked-lists/singly.test.ts",
+    "ll:singly": "ts-node src/linked-lists/singly.ts"
   },
   "keywords": ["typescript", "tap", "data structures", "algorithms"],
   "author": "Charlie Roth <charlieroth4@icloud.com>",
