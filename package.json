@@ -1,14 +1,14 @@
 {
-  "name": "DandA",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "dna",
+  "version": "0.0.1",
+  "description": "Data structures aNd Algorithms in TypeScript",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:ll:singly": "tap test/linked-lists/singly.test.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["typescript", "tap", "data structures", "algorithms"],
+  "author": "Charlie Roth <charlieroth4@icloud.com>",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.14.35",
     "@types/tap": "^14.10.3",
