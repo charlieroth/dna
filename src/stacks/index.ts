@@ -9,12 +9,12 @@ export class Stack<T> {
 
   public push(x: T): void | null {
     if (this.isFull()) return null;
-    this.arr.push(x);
+    this.arr.unshift(x);
   }
   
   public pop(): T | null {
     if (this.isEmpty()) return null;
-    return this.arr.pop();
+    return this.arr.shift();
   }
 
   public peek(): T | null {
@@ -29,5 +29,6 @@ export class Stack<T> {
   public isFull(): boolean {
     if (this.isEmpty()) return false;
     if (this.arr.length === this.capacity) return true;
+    return false;
   }
 }

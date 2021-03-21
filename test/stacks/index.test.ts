@@ -74,7 +74,7 @@ tap.test('isFull() returns false if length of stack does not equal capacity', (t
   const stack = new Stack<number>(3);
   stack.push(1);
   stack.push(2);
-  t.equal(stack.isFull(), true);
+  t.equal(stack.isFull(), false);
   t.done();
 });
 
@@ -82,6 +82,6 @@ tap.test('isFull() returns false if stack is empty', (t) => {
   const stack = new Stack<number>(3);
   stack.push(1);
   stack.push(2);
-  t.equal(stack.isFull(), true);
+  t.equal(stack.isFull(), false);
   t.done();
 });
