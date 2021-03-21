@@ -1,36 +1,101 @@
-class Node {
-  public key: string
-  public next: Node
+import { Node } from './node';
 
-  constructor(key: string, next: Node) {
-    this.key = key;
-    this.next = next;
-  }
-}
-
-export class DoublyLinkedList {
-  public head: Node;
-  public tail: Node;
-  public numNodes: number;
+export class DoublyLinkedList<T> {
+  public head: Node<T> | null;
+  public tail: Node<T> | null;
 
   constructor() {
     this.head = null;
     this.tail = null;
   }
   
-  public search(k: string) {
-
+  public prepend(k: T): Node<T> {
+    const node = new Node(k);
+    if (!this.head) {
+      // If list is empty, head is new node;
+      this.head = node;
+      this.tail = node;
+    } else if (this.size() === 1) {
+      node.next = this.tail;
+      this.head = node;
+      this.tail.prev = node;
+    } else {
+      node.next = this.head;
+      this.head.prev = node;
+      this.head = node;
+    }
+    return node;
   }
   
-  public insert(k: string) {
+  public append(k: T): Node<T> {
+    const node = new Node(k);
+    if (!this.head) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      this.tail.next = node;
+      node.prev = this.tail;
+      this.tail = node;
+    }
+    return node;
+  }
 
+  public search(k: T): Node<T> | null {
+    for (const n of this.nodes()) {
+      if (n.key === k) return n;
+    }
+    return null;
   }
   
-  public deleteFromHead(x: Node) {
+  public delete(x: Node<T>): Node<T> | null {
+    // If empty list
+    if (!this.head) return null;
 
+    // If x is head
+    if (this.head.key === x.key) {
+      this.head = x.next; 
+      this.head.prev = null;
+      return x;
+    }
+
+    // If x is tail
+    if (this.tail.key === x.key) {
+      const prevNode = x.prev;
+      prevNode.next = null;
+      this.tail = prevNode;
+      return x;
+    }
+
+    // If x is in middle
+    const prevNode = x.prev;
+    const nextNode = x.next;
+    prevNode.next = nextNode;
+    nextNode.prev = prevNode;
+    return x;
   }
   
-  public deleteFromTail(x: Node) {
+  public size(): number {
+    let s = 0;
+    for (const _ of this.nodes()) { s++ }
+    return s;
+  }
 
+  public printList(): void {
+    if (!this.head) return;
+
+    let printStr = "";
+    for (const n of this.nodes()) {
+      printStr += `<-"${n.key}"->`;
+    }
+    console.log(printStr);
+  }
+
+  private *nodes(): Generator<Node<T>, void, unknown> {
+    let curr = this.head;
+    while (curr !== null) {
+      yield curr;
+      curr = curr.next;
+    }
   }
 }
+  

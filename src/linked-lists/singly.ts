@@ -65,8 +65,7 @@ export class SinglyLinkedList<T> {
     }
 
     // If x is in middle
-    prev.next = null;
-    this.tail = prev;
+    prev.next = x.next;
     return x;
   }
   
