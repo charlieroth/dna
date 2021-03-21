@@ -9,15 +9,23 @@ Data Structures and Algorithms in Typescript
 - [x] Singly Linked List
 - [x] Doubly Linked List
 
-#### Stacks
-- [ ] Queues
-- [ ] Hash Tables
-- [ ] Heaps
+#### Stack
+- [x] LIFO Stack
 
-#### Graphs
+#### Queue
+- [x] FIFO Queue
+- [ ] Priority Queue
+
+#### Hash Table
+- [ ] Hash Table
+
+#### Heap
+- [ ] Heap
+
+#### Graph
   - [ ] MST
 
-#### Trees
+#### Tree
   - [ ] AVL
   - [ ] BST
   - [ ] n-ary
@@ -28,7 +36,7 @@ Data Structures and Algorithms in Typescript
 
 ## Algorithms
 
-#### [Graphs](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
+#### [Graph](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
 - [ ] [DFS](https://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/)
 - [ ] [BFS](https://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/)
 - [ ] [Dijkstra](https://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm/)
