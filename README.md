@@ -7,8 +7,7 @@ Data Structures and Algorithms in Typescript
 
 #### Linked List
 - [x] Singly Linked List
-- [ ] Doubly Linked List
-- [ ] Circular Linked List
+- [x] Doubly Linked List
 
 #### Stacks
 - [ ] Queues
