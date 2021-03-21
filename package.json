@@ -6,11 +6,10 @@
   "scripts": {
     "test:ll:singly": "tap test/linked-lists/singly.test.ts",
     "test:ll:doubly": "tap test/linked-lists/doubly.test.ts",
-    "test:ll:circular": "tap test/linked-lists/circular.test.ts",
-    "test:q:index": "tap test/queues/index.test.ts",
-    "test:g:index": "tap test/graphs/index.test.ts",
-    "test:ht:index": "tap test/hash-tables/index.test.ts",
     "test:s:index": "tap test/stacks/index.test.ts",
+    "test:q:index": "tap test/queues/index.test.ts",
+    "test:ht:index": "tap test/hash-tables/index.test.ts",
+    "test:g:index": "tap test/graphs/index.test.ts",
     "test:t:index": "tap test/trees/index.test.ts"
   },
   "keywords": ["typescript", "tap", "data structures", "algorithms"],
