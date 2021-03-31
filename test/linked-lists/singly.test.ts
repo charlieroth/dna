@@ -9,7 +9,11 @@ function randInRange(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min) + min); 
 }
 
-function mockSLL(appendOnly: boolean = false, prependOnly: boolean = false, mix: boolean = true): [SinglyLinkedList<string>, number] {
+function mockSLL(
+  appendOnly: boolean = false,
+  prependOnly: boolean = false,
+  mix: boolean = true
+): [SinglyLinkedList<string>, number] {
   const list = new SinglyLinkedList<string>(); 
   const N = randInRange(10, 50) 
   for (let i = 1; i <= N; i++) {
